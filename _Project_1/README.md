@@ -1,7 +1,7 @@
 # Data Jobs Dashboard w/ Power BI
 
-<img src="1.png" alt="Data Jobs Dashboard">
-<img src="2.png" alt="Data Jobs Drill Through Dashboard">
+![Data Jobs Dashboard](1.png)
+![Data Jobs Drill Through Dashboard](2.png)
 
 ## Introduction
 
