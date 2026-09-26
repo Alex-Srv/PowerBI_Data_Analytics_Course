@@ -57,3 +57,15 @@ An interactive Microsoft Power BI analytical dashboard engineered to examine the
 1. **Work Format & Pay**: Remote-eligible roles demonstrate competitive median compensation rates relative to on-site equivalents, while drawing from a broader, internationally distributed employer pool.
 2. **Hiring Seasonality**: Job posting volumes follow distinct annual patterns, peaking strongly during the spring recruitment wave (March–May) before tapering off toward late autumn.
 3. **Skill Valuation**: Advanced data infrastructure technologies and cloud platforms command superior median hourly and annual compensation compared to foundational operational toolsets.
+
+---
+
+## 👨‍💻 For Developers: Exploring Power Query
+
+The dashboard operates perfectly as a standalone file because the data is cached inside the `.pbix`. However, if you want to inspect the data transformation steps (ETL) inside **Power Query**, you will need to map the data source to your local machine:
+
+1. Download the raw CSV files from the [`Data/star_schema_files`](../Data/star_schema_files) folder in this repository.
+2. Open `my project 2.pbix` in Power BI Desktop.
+3. On the **Home** tab, click the dropdown arrow below **Transform data** and select **Edit parameters**.
+4. In the `FolderPath` field, enter the absolute path to the folder where you saved the downloaded CSV files on your PC (e.g., `C:\Downloads\star_schema_files\`). **Make sure to include the trailing backslash `\`.**
+5. Click **OK** and then click **Refresh**. Power Query will now successfully load the source files and allow you to explore the applied M code steps.
