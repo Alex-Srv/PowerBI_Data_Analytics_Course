@@ -31,10 +31,17 @@ An interactive Microsoft Power BI analytical dashboard engineered to examine the
 * **Focus**: Evaluation of remuneration methods across roles and worldwide geographic distribution.
 * **Core Visuals**:
   * **Clustered Bar Chart**: Side-by-side comparison of `Median salary yearly` and `Median salary year/ hourly` across data job titles.
-  * **Map**: Global geographic representation of job demand density by country.
+  * **Map**: Global geographic representation of job demand density by country, featuring pie chart markers to show the proportion of specific roles within each location.
 * **Filters**: Work arrangement toggle (`Work From home` vs. `Work on site`) and role selection.
 
-### Page 2: Ad-Hoc Parameter Explorer (One for All)
+### Page 2: Hiring Trends & Seasonality (Hire Rating)
+* **Focus**: Longitudinal volume behavior of data job postings across the calendar year, separated by profession.
+* **Core Visuals**:
+  * **Line Chart with Legend**: Continuous hiring trajectory showing monthly open job volumes (`Job count`), dynamically split into multiple lines to compare trends across selected job titles (e.g., Data Analyst vs. Data Engineer vs. Data Scientist).
+  * **Direct Data Labels**: Prominent data points highlighting hiring activity surges and seasonal contractions.
+* **Highlights**: Date granularity resolved via a dedicated date dimension table (`Calendar`) properly joined to job posting timestamps. The addition of the legend allows for direct cross-profession momentum comparisons.
+
+### Page 3: Ad-Hoc Parameter Explorer (One for All)
 * **Focus**: Flexible, full-scope data discovery without restrictive top-N truncations, allowing detailed inspection of the entire technology ecosystem.
 * **Core Visuals**:
   * **Dynamic Bar Chart**: Visualization driven by DAX Field Parameters.
@@ -42,13 +49,6 @@ An interactive Microsoft Power BI analytical dashboard engineered to examine the
     * **Category Axis (Dimension)**: Dynamic switching between `Job Title Name`, `Job Country`, `Skills`, and `Company name`.
     * **Measure Selection (Metric)**: Instant recalculation across `Job count`, `Median salary year/ hourly`, and `Median salary yearly`.
 * **Highlights**: Allows end users to investigate niche tools and specific salary distributions across remote and on-site roles without modifying underlying report views.
-
-### Page 3: Hiring Trends & Seasonality (Hire Rating)
-* **Focus**: Longitudinal volume behavior of data job postings across the calendar year.
-* **Core Visuals**:
-  * **Line Chart**: Continuous hiring trajectory showing monthly open job volumes (`Job count`).
-  * **Direct Data Labels**: Prominent data points highlighting hiring activity surges (spring peak) and seasonal contractions (late Q4).
-* **Highlights**: Date granularity resolved via a dedicated date dimension table (`Calendar`) properly joined to job posting timestamps.
 
 ---
 
